@@ -1,0 +1,10 @@
+FROM node:10
+LABEL image.maintainer="Attila Varga" \
+      image.version="1.0" \
+      image.useage="development"
+RUN npm install -g redis-commander
+COPY ./redis-commander-bootstrap.sh /opt
+WORKDIR /opt
+RUN chmod +x ./redis-commander-bootstrap.sh
+CMD ./redis-commander-bootstrap.sh
+#RUN redis-commander --redis-port 6379
