@@ -1,0 +1,21 @@
+version: "3.1"
+
+services:
+  redis:
+    image: "redis:latest"
+    container_name: redis
+    restart: always
+    ports:
+      - 6379:6379
+
+  redis-commander:
+    depends_on:
+      - redis
+    build:
+      context: ./redis-commander
+      dockerfile: redis-commander-dockerfile
+    image: redis-commander
+    container_name: redis-commander
+    restart: always
+    ports:
+      - 8081:8081

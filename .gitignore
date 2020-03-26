@@ -1,2 +1,2 @@
-/dump/*
-!/dump/.gitkeep
+mongo/dump/*
+!mongo/dump/.gitkeep
