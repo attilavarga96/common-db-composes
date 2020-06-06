@@ -1,14 +1,18 @@
-version: "3.1"
+version: "3.2"
 
 services:
   mysql:
-    image: mysql:latest
+    image: mysql:5.7
     container_name: mysql
     environment:
       MYSQL_USER: user
       MYSQL_PASSWORD: user
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: user
       MYSQL_DATABASE: db
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
   
   phpmyadmin:
     depends_on:

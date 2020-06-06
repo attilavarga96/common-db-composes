@@ -15,6 +15,7 @@
 >8082 - Mongo Express  
 >8083 - phpMyAdmin  
 >8084 - pgAdmin
+>8085 - RabbitMQ Management
 
 Cassandra only has cqlsh connection script in cassandra folder:
 >cd cassandra  
