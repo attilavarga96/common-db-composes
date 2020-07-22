@@ -13,4 +13,7 @@ cd ..
 cd redis
 sudo docker-compose down
 cd ..
+cd rabbitmq
+sudo docker-compose down
+cd ..
 exit
